@@ -1,12 +1,13 @@
 package com.example.demo.domain.posts;
 
-import org.assertj.core.util.Lists;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import java.util.List;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
@@ -35,7 +36,7 @@ public class PostsRepositoryTest {
                 .build());
 
         //when
-        Lists<Posts> postsLists = postsRepository.findAll();
+        List<Posts> postsLists = postsRepository.findAll();
 
         //then
         Posts posts =  postsLists.get(0);
